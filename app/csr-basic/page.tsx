@@ -1,8 +1,7 @@
 "use client"
-import Image from "next/image";
-import { useEffect, useState } from "react";
-// khi tạo 1 cái component (export default function) thì mặc định là server component,chạy môi trường server
-export default function Home() {
+import React, { useEffect, useState } from 'react'
+
+export default function page() {
   const [users,setUsers]=useState([]);
   useEffect(()=>{
       fetch("https://jsonplaceholder.typicode.com/users")
@@ -17,5 +16,5 @@ export default function Home() {
         <p>{user.name}</p>
        ))}
     </div>
-  );
+  )
 }
